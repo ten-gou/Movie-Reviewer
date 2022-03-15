@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css ">
+    <title>Reviewer</title>
+</head>
+<body>
+    <div class = "flex justify-between items-center py-8 bg-blue-800">
+        <div class="shrink-0 ml-10 cursor-pointer">
+            <i class ="fa-solid fa-clapperboard fa-2x text-amber-300"></i>
+            <span class= "ml-2 text-3xl text-blue-100 font-semibold">Reviewer</span>
+        </div>
+        <input type="search" class="flex rounded w-72 mr-10" placeholder="Search Movie/TV Series">        
+        <ul class="hidden md:flex overflow-x-hidden mr-10 font-semibold space-x-4">
+            <li class="mr-6 p-1">
+                <a class="text-white hover:text-blue-200" href="#">Home</a>
+            </li>
+              <li class="mr-6 p-1">
+                <a class="text-white hover:text-blue-200" href="#">About</a>
+            </li>
+            <li class="mr-6 p-1">
+                <a class="text-white hover:text-blue-200" href="#">Review</a>
+            </li>
+            <li class="mr-6 p-1">
+                <a class="text-white hover:text-blue-200" href="#">Creators</a>
+            </li>
+
+        </ul>
+    </div>
+    <aside class="w-64" aria-label ="SideBar">
+      <div class ="overflow-y-auto py-4 px-3 bg-gray-300 dark:bg-gray-700">
+        <ul class = "space-y-2">
+          <li class="movies">
+            <button onclick="dropMovies()" type="button" class = "flex items-center p-2 w-full text-base font-normal text-gray-900 rounded transition duration-100"aria-controls="dropdown-1">
+              <i class ="fa-solid fa-clapperboard text-blue-800 fa-2x"></i>
+              <span class="flex-1 ml-8 text-left italic whitespace-nowrap" sidebar-toggle-item>Movies</span>
+            </button>
+            <ul id="dropdown1" class="py-2 space-y-2">
+              <li>
+                 <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Horror</a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Comedy</a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Adventure</a>
+              </li>
+        </ul>
+          </li>
+          <li class="TV">
+            <button onclick="dropTV()" type="button" class = "flex items-center p-2 w-full text-base font-normal text-gray-900 rounded transition duration-100"aria-controls="dropdown-2">
+              <i class ="fa-solid fa-tv text-green-800 fa-2x"></i>
+              <span class="flex-1 ml-8 text-left italic whitespace-nowrap" sidebar-toggle-item>TV</span>
+            </button>
+            <ul id="dropdown2" class="py-2 space-y-2">
+              <li>
+                 <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Horror</a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Comedy</a>
+              </li>
+              <li>
+                 <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Adventure</a>
+              </li>
+        </ul>
+          </li>
+        </ul>
+      </div> 
+    </aside>
+    <section class="bg-gray-100">
+      <div class="container mx-auto px-6 py-20">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
+          About
+        </h2>
+        <div class="flex flex-wrap">
+          <div class="w-full px-2 mb-8">
+            <div class="bg-white rounded shadow py-2">
+              <p class="text-gray-800 text-base px-6 mb-5">
+                With Reviewer, you can search up a movie or tv series, which will pull up information on it.
+              You can either look up the movee or tv series using the search bar on top, or choose movie based on categories, using the menu on the left. </p>
+            </div>
+          </div>
+    </section>
+   
+    <script src="script.js"></script>
+</body>
+</html>
