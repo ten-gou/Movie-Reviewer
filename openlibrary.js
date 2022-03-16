@@ -9,7 +9,7 @@ var bookSearch = function() {
     var requestUrl = 'http://openlibrary.org/search.json?q=' + input;
     console.log(requestUrl);
 
-    fetch(requestUrl)
+    fetch(requestUrl) 
         .then(function(response) {
         return response.json();
     })
@@ -58,15 +58,26 @@ var bookSearch = function() {
 
             // summary element
             var summary = document.createElement('p');
-            var summ = 'https://www.google.com/search?q=' + data.docs[i].isbn[0] + '&';
-            console.log
+            var requestUrl2 = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + data.docs[i].isbn[0]
+            summary.setAttribute('desc', i);
+            fetch(requestUrl2) 
+                .then(function(response) {
+                    return response.json();
+            })
+            .then(function(data) {
+                console.log(data.items[0].volumeInfo.description)
+                summary.textContent = data.items[0].volumeInfo.description;
+            })
             
             bookbox.appendChild(header);
             bookbox.appendChild(cover);
+            bookbox.appendChild(summary);
             outputEl.appendChild(bookbox);
         }
 
         })
+
+
 }
 
 buttonEl.addEventListener("click", bookSearch);
