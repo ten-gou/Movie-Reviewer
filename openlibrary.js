@@ -43,8 +43,14 @@ var bookSearch = function() {
 
             var bookbox = document.createElement('div');
             bookbox.className = 'container px-6 py-20 bg-gray-100 m-2 shadow w-full min-w-xl';
+
+            var cover = document.createElement('img');
+            cover.src = 'https://covers.openlibrary.org/b/isbn/' + data.docs[i].isbn[0] + '.jpg';
+            cover.className = 'mx-auto rounded-xl'
+            cover.alt = title[i] + 'cover art'
             
             bookbox.appendChild(header);
+            bookbox.appendChild(cover);
             outputEl.appendChild(bookbox);
         }
 
