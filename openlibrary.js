@@ -40,12 +40,14 @@ var bookSearch = function() {
                 title.push(data.docs[i].title);
             }
 
+            // entire div box, containing the book and elements within
+            var bookbox = document.createElement('div');
+            bookbox.className = 'container px-6 py-20 bg-gray-100 m-2 shadow w-full min-w-xl';
+
+            // Book Title and the Author's name
             var header = document.createElement('h2');
             header.className = 'text-2xl font-bold text-center text-gray-800 mb-8'
             header.textContent = title[i] + ' by ' + author[i];
-
-            var bookbox = document.createElement('div');
-            bookbox.className = 'container px-6 py-20 bg-gray-100 m-2 shadow w-full min-w-xl';
 
             // book cover element
             var cover = document.createElement('img');
@@ -53,6 +55,11 @@ var bookSearch = function() {
             cover.src = image;
             cover.className = 'mx-auto rounded-xl text-center';
             cover.alt = title[i] + ' cover art';
+
+            // summary element
+            var summary = document.createElement('p');
+            var summ = 'https://www.google.com/search?q=' + data.docs[i].isbn[0] + '&';
+            console.log
             
             bookbox.appendChild(header);
             bookbox.appendChild(cover);
