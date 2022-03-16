@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Reviewer</title>
 </head>
 <body>
@@ -15,7 +14,8 @@
             <i class ="fa-solid fa-clapperboard fa-2x text-amber-300"></i>
             <span class= "ml-2 text-3xl text-blue-100 font-semibold">Reviewer</span>
         </div>
-        <input type="search" class="flex rounded w-72 mr-10" placeholder="Search Movie/TV Series">        
+        <input type="search" class="flex rounded w-72 mr-10" placeholder="Search Movie/TV Series" id="search-input"/>
+        <button id="button"> CLICK ME</button>        
         <ul class="hidden md:flex overflow-x-hidden mr-10 font-semibold space-x-4">
             <li class="mr-6 p-1">
                 <a class="text-white hover:text-blue-200" href="./index.html">Home</a>
@@ -72,6 +72,11 @@
         </ul>
       </div> 
     </aside>
+
+    <section id="output">
+
+    </section>
+
     <section class="bg-gray-100">
       <div class="container mx-auto px-6 py-20">
         <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
@@ -88,5 +93,6 @@
     </section>
    
     <script src="script.js"></script>
+    <script src="openlibrary.js"></script>
 </body>
 </html>
