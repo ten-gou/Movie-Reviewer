@@ -1,5 +1,5 @@
 var searchEl = document.getElementById("search-input");
-var buttonEl = document.getElementById("button");
+var buttonEl = document.getElementById("b-button");
 var outputEl = document.getElementById("output")
 
 var bookSearch = function() {
