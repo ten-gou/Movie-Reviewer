@@ -22,7 +22,7 @@ var bookSearch = function() {
         console.log(data);
 
         var author = [];
-        var title = []
+        var title = [];
         
         for (i = 0; i < 9; i++) {
             if (typeof data.docs[i].author_name !== 'undefined')
@@ -37,11 +37,15 @@ var bookSearch = function() {
                 title.push(data.docs[i].title);
             }
 
-            console.log(title[i] + ' by ' + author[i]);
-            var header = document.createElement('div');
+            var header = document.createElement('h2');
+            header.className = 'text-2xl font-bold text-center text-gray-800 mb-8'
             header.textContent = title[i] + ' by ' + author[i];
 
-            outputEl.appendChild(header);
+            var bookbox = document.createElement('div');
+            bookbox.className = 'container px-6 py-20 bg-gray-100 m-2 shadow w-full min-w-xl';
+            
+            bookbox.appendChild(header);
+            outputEl.appendChild(bookbox);
         }
 
         })
