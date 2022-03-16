@@ -19,9 +19,30 @@ var bookSearch = function() {
             outputEl.removeChild(outputEl.firstChild);
         }
 
-        console.log(data)
+        console.log(data);
 
+        var author = [];
+        var title = []
         
+        for (i = 0; i < 9; i++) {
+            if (typeof data.docs[i].author_name !== 'undefined')
+                author.push(data.docs[i].author_name);
+            else {
+                author.push('Unknown');
+            }
+
+            if (typeof data.docs[i].subtitle !== 'undefined')
+                title.push(data.docs[i].title + ':' + data.docs[i].subtitle);
+            else {
+                title.push(data.docs[i].title);
+            }
+
+            console.log(title[i] + ' by ' + author[i]);
+            var header = document.createElement('div');
+            header.textContent = title[i] + ' by ' + author[i];
+
+            outputEl.appendChild(header);
+        }
 
         })
 }
