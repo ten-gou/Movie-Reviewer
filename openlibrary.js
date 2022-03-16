@@ -24,15 +24,18 @@ var bookSearch = function() {
         var author = [];
         var title = [];
         
+        
         for (i = 0; i < 9; i++) {
-            if (typeof data.docs[i].author_name !== 'undefined')
+            if (typeof data.docs[i].author_name !== 'undefined') {
                 author.push(data.docs[i].author_name);
+            }
             else {
                 author.push('Unknown');
             }
 
-            if (typeof data.docs[i].subtitle !== 'undefined')
+            if (typeof data.docs[i].subtitle !== 'undefined') {
                 title.push(data.docs[i].title + ':' + data.docs[i].subtitle);
+            }
             else {
                 title.push(data.docs[i].title);
             }
@@ -44,10 +47,12 @@ var bookSearch = function() {
             var bookbox = document.createElement('div');
             bookbox.className = 'container px-6 py-20 bg-gray-100 m-2 shadow w-full min-w-xl';
 
+            // book cover element
             var cover = document.createElement('img');
-            cover.src = 'https://covers.openlibrary.org/b/isbn/' + data.docs[i].isbn[0] + '.jpg';
-            cover.className = 'mx-auto rounded-xl'
-            cover.alt = title[i] + 'cover art'
+            var image = 'https://covers.openlibrary.org/b/isbn/' + data.docs[i].isbn[0] + '.jpg?default=false'
+            cover.src = image;
+            cover.className = 'mx-auto rounded-xl text-center';
+            cover.alt = title[i] + ' cover art';
             
             bookbox.appendChild(header);
             bookbox.appendChild(cover);
