@@ -6,7 +6,7 @@ var bookSearch = function() {
     var book = searchEl.value;
     var input = book.replaceAll(" ", '+');
 
-    var requestUrl = 'http://openlibrary.org/search.json?q=' + input;
+    var requestUrl = 'https://openlibrary.org/search.json?q=' + input;
     console.log(requestUrl);
 
     fetch(requestUrl) 
