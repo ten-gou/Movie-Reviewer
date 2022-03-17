@@ -25,8 +25,13 @@
               </button>
             </li>
             <li>
-              <button id ="m-button" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Movie/TV
+              <button id ="m-button" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Movie
                 <i class ="fa-solid fa-clapperboard text-gray-800 fa-2x"></i>
+              </button>
+            </li>
+            <li>
+              <button id ="t-button" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">TV
+                <i class ="fa-solid fa-tv text-gray-800 fa-2x"></i>
               </button>
             </li>
           </ul> 
@@ -51,6 +56,7 @@
     <aside class="w-64" aria-label ="SideBar">
       <div class ="overflow-y-auto py-4 px-3 bg-gray-300 dark:bg-gray-700">
         <ul class = "space-y-2">
+
           <li class="movies">
             <button onclick="dropMovies()" type="button" class = "flex items-center p-2 w-full text-base font-normal text-gray-900 rounded transition duration-100"aria-controls="dropdown-1">
               <i class ="fa-solid fa-clapperboard text-blue-800 fa-2x"></i>
@@ -68,6 +74,7 @@
               </li>
         </ul>
           </li>
+
           <li class="TV">
             <button onclick="dropTV()" type="button" class = "flex items-center p-2 w-full text-base font-normal text-gray-900 rounded transition duration-100"aria-controls="dropdown-2">
               <i class ="fa-solid fa-tv text-green-800 fa-2x"></i>
@@ -86,26 +93,17 @@
         </ul>
           </li>
         </ul>
+        
       </div> 
     </aside>
 
-    <section id="output" class="w-screen flex-col">    </section>
+    <section id="output" class="w-screen flex-col">
+
     </section>
-    
-    <section class="bg-gray-100">
-      <div class="container mx-auto px-6 py-20">
-        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
-          About
-        </h2>
-        <div class="flex flex-wrap">
-          <div class="w-full px-2 mb-8">
-            <div class="bg-white rounded shadow py-2">
-              <p class="text-gray-800 text-base px-6 mb-5">
-                With Reviewer, you can search up a movie or tv series, which will pull up information on it.
-              You can either look up the movee or tv series using the search bar on top, or choose movie based on categories, using the menu on the left. </p>
-            </div>
-          </div>
     </section>
+    <footer class="items-center bg-gray-600 p-4"> 
+    </footer>
+   
    
     <script src="script.js"></script>
     <script src="openlibrary.js"></script>
