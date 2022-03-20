@@ -1,18 +1,23 @@
 *{
-    margin: 0;
-    padding: 0;
+
     background-color: none;
     box-sizing: border-box;
-    /* background-color: rgba(25, 220, 200, 1.5); */
+     /*background-color: rgba(25, 220, 200, 1.5); This overide othe code and I think it may still be useful in future*/
+     background-color: mediumaquamarine;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url("./images/bckg2.JPG");
+    background-image: url("./images/bckg3copy.JPG");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: -1;
+    margin: 20px;
+    padding: 10px;
 }
 /* .button section padding 30px, 35px; color: white, background transparent; outline*/
 .menu-btn{
@@ -61,7 +66,7 @@ body{
 #navbar ul li a:hover{
     background-color: white;
     color: black;
-    box-shadow: 0 0 10px white;
+    box-shadow: 10 10 10px white;
 }
 
 /* Creator section */
@@ -73,6 +78,7 @@ body{
     font-style: oblique;
     font-weight: 500;
     margin: 0px;
+    background-color: mediumaquamarine;
 }
 
 .creator-sec h2 {
@@ -85,3 +91,107 @@ body{
     font-display: initial;
 }
 
+.creator-sec h3 {
+    font-size: 22px;
+    color: white;
+    font-style: oblique;
+    text-align: left;
+}
+
+.creator-sec p {
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    justify-content: bottom;
+    text-align: bottom;
+    align-content: center;
+
+}
+
+.creator-sec img {
+    width: 1200 !important;
+    height: 950;
+    
+}
+
+
+/* About section */
+.about-reviwer-sec {
+    margin: 2px;
+    padding: auto;
+    height: fit-content;
+}
+
+.about-reviwer-sec p {
+    color: white;
+    bottom: 20px;
+    top: 0%;
+    height: fit-content;
+    
+}
+
+.about-reviwer-sec h2 {
+    margin: 2px;
+    padding: 5px;
+    font-size: 40px;
+    color: white;
+    font-weight: 10px;
+    font-style: oblique;
+}
+
+/* index-sec*/
+
+.index-sec {
+    background-color: mediumaquamarine !important;
+    margin: 1px;
+    padding: 10px;
+}
+
+.index-sec h2 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 40px;
+    font-style: oblique;
+    font-weight: 10px;
+    color: white;
+
+}
+
+.index-sec p {
+    text-align: justify;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: 10px;
+    color: white;
+}
+/*Side-sec Section*/
+
+
+.side-sec a {
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.side-sec {
+    background-color: mediumaquamarine !important;
+    margin: 10 10px;
+    padding: 10 10px;
+}
+
+.side-sec a:hover {
+    background-color: white;
+    color: black;
+    text-shadow: 10px;
+    shape-margin: 15px;
+}
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {width: 240px; float: left;}
+    #main {margin-left: 220px;}
+    .text {
+        font-size: 16px;
+    }
+}
