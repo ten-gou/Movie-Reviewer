@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.3.4/dist/flowbite.min.css" />
     <title>Reviewer</title>
 </head>
 <body>
-    <div class = "flex justify-between items-center py-8 bg-blue-800">
+    <nav class = "flex justify-between items-center py-8">
         <div class="shrink-0 ml-10 cursor-pointer">
             <i class ="fa-solid fa-clapperboard fa-2x text-amber-300"></i>
             <span class= "ml-2 text-3xl text-blue-100 font-semibold">Reviewer</span>
         </div>
         <input type="search" class="flex-col rounded w-72 ml-80" placeholder="Type in Here, and Select Option" id="search-input"/> 
-        <button id="option-button" class="flex-col text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2 text-center mr-40" id="menu-button" data-dropdown-toggle="dropdown"> Option</button>   
+        <button id="option-button" class="flex-col text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2 text-center mr-40 menu-btn"  data-dropdown-toggle="dropdown"> Option</button>   
         <div id="dropdown" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"> 
           <ul class="py-1" aria-labelledby="dropdownButton">
             <li>
@@ -51,7 +52,7 @@
             </li>
 
         </ul>
-    </div>
+    </nav>
     <section class="flex row">
     <aside class="w-64" aria-label ="SideBar">
       <div class ="overflow-y-auto py-4 px-3 bg-gray-300 dark:bg-gray-700">

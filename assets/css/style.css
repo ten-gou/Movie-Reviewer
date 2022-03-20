@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: none;
+    box-sizing: border-box;
+    /* background-color: rgba(25, 220, 200, 1.5); */
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("./images/bckg2.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+/* .button section padding 30px, 35px; color: white, background transparent; outline*/
+.menu-btn{
+    padding: 30px 35px;
+     background-color: transparent;
+     border: 1px;
+     color: white;
+     outline: none;
+     transition: .6s ease;
+     font-size: 20px;
+     font-weight: 700;
+}
+/* #btn:hover cursor: pointer background white; color: black; font-weight margin; */
+.menu-btn:hover {
+    cursor: pointer;
+     background-color: white !important;
+     color: black;
+     font-weight: bold;
+     margin-bottom: 50px;
+     font-size: medium;
+}
+/* paragraph section color white padding, margin, height*/
+#parag{
+    color: white;
+    margin: 2px;
+    padding: 2px;
+    height: auto;
+}
+
+/* Nav Section  */
+#navbar{
+    display: flex;
+    color: white;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+#navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0;
+}
+
+#navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+/* Creator section */
+
+.creator-sec {
+    color: white;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.creator-sec h2 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-size: 44px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-display: initial;
+}
+
