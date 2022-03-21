@@ -54,6 +54,17 @@ var loadTVList = function(){
                         deleteButton.setAttribute('type','button');
                         deleteButton.className = "flex flex-col text-md lg:text-sm font-bold py-2 px-4 rounded bg-blue-800 text-blue-100 float-right"
                         deleteButton.textContent = 'Delete';
+                `       //Add Save Button
+                        var saveButton = document.createElement('button');
+                        saveButton.setAttribute('id','save'+[i]);
+                        saveButton.setAttribute('type','button');
+                        saveButton.className = "saveBtn flex flex-col text-md lg:text-sm font-bold py-2 px-4 rounded bg-blue-400 text-blue-100 float-right"
+                        saveButton.textContent = 'Save';
+                        //Used for User Input
+                         var review = document.createElement('textarea');
+                        review.setAttribute('id','review-m'+[i]);
+                        review.className = ' textarea flex flex-col text-md lg:text-sm font-bold py-2 px-4 rounded bg-gray-100 text-gray-800 w-full float-right'
+                        review.placeholder = 'Write Review Here';
 
                         overviewContainer.appendChild(innerInfo);
                         infoContainer.appendChild(title);
@@ -65,18 +76,11 @@ var loadTVList = function(){
                         reviewBox.appendChild(imageContainer);
                         reviewBox.appendChild(infoContainer);
                         reviewBox.appendChild(deleteButton);
+                        reviewBox.appendChild(review);
+                        reviewBox.appendChild(saveButton)
                         reviewEL.appendChild(reviewBox);
 
 
-                        (function(index){
-                            saveButton.addEventListener("click", function() {
-                                let value = review.getAttributeNode("id").value;
-                                var reviewID = review.getAttribute('id');
-                                sessionStorage.setItem(reviewID, value);
-                                console.log(index);
-                             
-                            })
-                          })(i)
 
                         (function(index){
                             deleteButton.addEventListener("click", function() {
@@ -177,16 +181,8 @@ var loadTVList = function(){
 
                         
                     
-                        //Saves Review
-                        (function(index){
-                            saveButton.addEventListener("click", function() {
-                                let value = review.getAttributeNode("id").value;
-                                var reviewID = review.getAttribute('id');
-                                sessionStorage.setItem(reviewID, value);
-                                console.log(index);
-                             
-                            })
-                          })(i)
+                        
+                        
                         //Deletes from List (requires refresh)
                         (function(index){
                             deleteButton.addEventListener("click", function() {
